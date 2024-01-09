@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Offer from "./pages/Offer";
 import UserDashboard from "./pages/UserDashboard";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
                 <Route path="/dashboard" element={<UserDashboard />} />
               </Routes>
             </div>
-            
+
+            <Footer />
           </div>
         </ChakraProvider>
       </AuthProvider>
