@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -10,26 +10,27 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <AuthProvider>
         <ChakraProvider>
-          <div>
+          <>
             <Navbar />
 
-            <div>
+            <Box>
               <Routes>
+                <Route path="*" element={<div>404 NOT FOUND</div>} />
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/offer" element={<Offer />} />
                 <Route path="/dashboard" element={<UserDashboard />} />
               </Routes>
-            </div>
+            </Box>
 
             <Footer />
-          </div>
+          </>
         </ChakraProvider>
       </AuthProvider>
-    </Router>
+    </BrowserRouter>
   );
 };
 

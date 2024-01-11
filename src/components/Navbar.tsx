@@ -15,7 +15,7 @@ import { useAuth } from "../context/AuthContext";
 const Navbar = () => {
   const { loggedIn, handleLogout } = useAuth();
 
-  const renderUserLink = () => {
+  const RenderUserLink = () => {
     if (loggedIn) {
       return (
         <ChakraLink as={ReactRouterLink} to="/dashboard">
@@ -46,13 +46,11 @@ const Navbar = () => {
       alignItems="center"
       justifyContent="space-between"
       px={8}
-      bg="white"
+      bg="gray.800"
+      color="white"
       boxShadow="md"
-      position="fixed"
+      position="sticky"
       top="0"
-      left="0"
-      right="0"
-      zIndex="999"
     >
       <Box mx={4}>
         <ChakraLink as={ReactRouterLink} to="/">
@@ -69,7 +67,7 @@ const Navbar = () => {
       </Box>
 
       <HStack>
-        {renderUserLink()}
+        <RenderUserLink />
 
         <Divider orientation="vertical" ml={4} h="30px" />
         <ChakraLink as={ReactRouterLink} to="/offer">
