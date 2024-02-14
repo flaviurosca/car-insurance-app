@@ -1,41 +1,60 @@
 import { Box, Flex, Text, Image, VStack } from "@chakra-ui/react";
+import ReviewsSection from "../components/ReviewsSection";
+import FeaturesSection from "../components/FeaturesSection";
+import CreateOfferButton from "../components/CreateOfferButton";
+import BenefitsSection from "../components/BenefitsSection";
 
 const Home = () => {
   return (
-    <Flex justify="center" align="center" h="100vh">
-      <VStack>
-        <Box>
-          <Text fontSize="6xl" fontWeight="bold">
-            Car insurance
-          </Text>
-          <Text fontSize="6xl" fontWeight="bold">
-            made simple
-          </Text>
-        </Box>
+    <VStack h="full" spacing={16} bg="gray.900">
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        w="full"
+        justify="center"
+        align="center"
+        color="white"
+        mt={{ base: 20, md: 30 }}
+      >
+        <VStack w={{ base: "90%", lg: "40%" }}>
+          <Box>
+            <Text fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold">
+              Car insurance
+            </Text>
+            <Text fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold">
+              made simple
+            </Text>
+          </Box>
 
-        <Box
-          maxW="600px"
-          mx="4"
-          p="4"
-          boxShadow="md"
-          bg="white"
-          borderRadius="lg"
-          flex="1"
-        >
-          <Text fontSize="xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-            commodi nesciunt sed doloremque at veniam nam exercitationem
-            dolorum! Tempore facilis at, sequi perferendis nam nobis veniam
-            eveniet beatae reiciendis nisi, eos ea fuga quibusdam, delectus
-            culpa! Consequatur aliquam nulla ea!
-          </Text>
-        </Box>
-      </VStack>
+          <Box p={4} boxShadow="md" color="gray.300" borderRadius="lg">
+            <Text fontSize="xl">
+              Your road to secure journeys! Experience peace of mind with our
+              comprehensive car insurance solutions. Tailored for every driver,
+              our app ensures hassle-free claims, personalized coverage, and
+              expert support. Drive confidently with RoadMaster - where
+              protection meets simplicity.
+            </Text>
+          </Box>
+        </VStack>
 
-      <Box maxW="400px" mx="4">
-        <Image src="/img/cars.png" alt="Cars image" borderRadius="lg" />
-      </Box>
-    </Flex>
+        <Box w={{ base: "50%", lg: "40%" }} m={4}>
+          <Image src="/img/car.png" alt="Car image" borderRadius="lg" />
+        </Box>
+      </Flex>
+
+      <CreateOfferButton />
+
+      <BenefitsSection />
+
+      <ReviewsSection />
+
+      <FeaturesSection />
+
+      <CreateOfferButton />
+
+      <Text color="white" fontSize="3xl" fontWeight="bold" pb={8}>
+        RoadMaster
+      </Text>
+    </VStack>
   );
 };
 
