@@ -10,18 +10,18 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { useForm } from "react-hook-form";
 import { format } from "date-fns";
 import { z } from "zod";
-import { formMessages } from "../utils/formMessages";
+import { formMessages } from "../../utils/formMessages";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   generateRandomPremium,
   getUsersData,
   setUsersData,
   validateBirthdate,
-} from "../utils/helpers";
+} from "../../utils/helpers";
 
 const formSchema = z.object({
   firstName: z

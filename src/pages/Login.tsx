@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Button, Center, Divider } from "@chakra-ui/react";
-import LoginForm from "../components/LoginForm";
-import RegistrationForm from "../components/RegistrationForm";
+import LoginForm from "../components/forms/LoginForm";
+import RegistrationForm from "../components/forms/RegistrationForm";
 
 const Login = () => {
   const [showLogin, setShowLogin] = useState(true);

@@ -17,11 +17,11 @@ import { useNavigate } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { IoMdKey } from "react-icons/io";
 import { useForm } from "react-hook-form";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { formMessages } from "../utils/formMessages";
-import { getUsersData } from "../utils/helpers";
+import { formMessages } from "../../utils/formMessages";
+import { getUsersData } from "../../utils/helpers";
 
 const formSchema = z.object({
   email: z

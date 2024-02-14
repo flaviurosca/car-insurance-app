@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import CreateOfferForm from "../components/CreateOfferForm";
+import CreateOfferForm from "../components/forms/CreateOfferForm";
 
 const Offer = () => {
   const { loggedIn } = useAuth();

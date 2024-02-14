@@ -17,9 +17,9 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { formMessages } from "../utils/formMessages";
-import { PASSWORD_REGEX } from "../utils/constants";
-import { getUsersData, setUsersData } from "../utils/helpers";
+import { formMessages } from "../../utils/formMessages";
+import { PASSWORD_REGEX } from "../../utils/constants";
+import { getUsersData, setUsersData } from "../../utils/helpers";
 
 const formSchema = z.object({
   email: z
