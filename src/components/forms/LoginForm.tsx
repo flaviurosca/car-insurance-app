@@ -83,12 +83,12 @@ const LoginForm = () => {
         Log into your account
       </Text>
 
-      <Box w="md" borderWidth="1px" borderRadius="lg" p={4}>
+      <Box borderWidth="1px" borderRadius="lg" p={4}>
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <Stack spacing={3}>
             <FormControl id="email" isInvalid={!!errors.email}>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" {...register("email")} />
+              <Input type="email" {...register("email")} autoComplete="off" />
               <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
             </FormControl>
 
@@ -98,6 +98,7 @@ const LoginForm = () => {
                 <Input
                   type={showPassword ? "text" : "password"}
                   {...register("password")}
+                  autoComplete="off"
                 />
                 <InputRightElement w="3rem">
                   <Button
@@ -116,7 +117,13 @@ const LoginForm = () => {
               <FormErrorMessage>{errors.password?.message}</FormErrorMessage>
             </FormControl>
 
-            <Button type="submit" colorScheme="green">
+            <Button
+              type="submit"
+              variant="ghost"
+              colorScheme="gray"
+              bg="#51ACEC"
+              fontWeight="bold"
+            >
               <HStack spacing={2}>
                 <IoMdKey size={20} />
                 <Text>Login</Text>

@@ -84,7 +84,7 @@ const RegistrationForm = () => {
         Create a new account
       </Text>
 
-      <Box w="md" borderWidth="1px" borderRadius="lg" p={4}>
+      <Box borderWidth="1px" borderRadius="lg" p={4}>
         <form onSubmit={handleSubmit(handleRegistration)} noValidate>
           <Stack spacing={3}>
             <FormControl id="email" isInvalid={!!errors.email}>
@@ -93,6 +93,7 @@ const RegistrationForm = () => {
                 type="email"
                 placeholder="john@doe.com"
                 {...register("email")}
+                autoComplete="off"
               />
               <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
             </FormControl>
@@ -104,6 +105,7 @@ const RegistrationForm = () => {
                   type={showPassword ? "text" : "password"}
                   onFocus={handlePasswordFocus}
                   {...register("password")}
+                  autoComplete="off"
                 />
                 <InputRightElement width="3rem">
                   <Button
@@ -125,7 +127,13 @@ const RegistrationForm = () => {
               <FormErrorMessage>{errors.password?.message}</FormErrorMessage>
             </FormControl>
 
-            <Button colorScheme="green" type="submit">
+            <Button
+              type="submit"
+              variant="ghost"
+              colorScheme="gray"
+              bg="#51ACEC"
+              fontWeight="bold"
+            >
               Register
             </Button>
           </Stack>
