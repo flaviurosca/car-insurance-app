@@ -116,18 +116,24 @@ const CreateOfferForm = () => {
   };
 
   return (
-    <Box w="md" borderWidth="1px" borderRadius="lg" p="4">
+    <Box
+      w={{ base: "xs", md: "md" }}
+      borderWidth="1px"
+      borderRadius="lg"
+      p={4}
+      mt={4}
+    >
       <form onSubmit={handleSubmit(handleOfferSubmit)} noValidate>
-        <Stack spacing={3}>
+        <Stack spacing={8}>
           <FormControl id="firstName" isInvalid={!!errors.firstName} isRequired>
             <FormLabel>First Name</FormLabel>
-            <Input type="text" {...register("firstName")} />
+            <Input type="text" {...register("firstName")} autoComplete="off" />
             <FormErrorMessage>{errors.firstName?.message}</FormErrorMessage>
           </FormControl>
 
           <FormControl id="lastName" isInvalid={!!errors.lastName} isRequired>
             <FormLabel>Last Name</FormLabel>
-            <Input type="text" {...register("lastName")} />
+            <Input type="text" {...register("lastName")} autoComplete="off" />
             <FormErrorMessage>{errors.lastName?.message}</FormErrorMessage>
           </FormControl>
 
@@ -160,7 +166,11 @@ const CreateOfferForm = () => {
             isRequired
           >
             <FormLabel>Car Manufacturer</FormLabel>
-            <Input type="text" {...register("carManufacturer")} />
+            <Input
+              type="text"
+              {...register("carManufacturer")}
+              autoComplete="off"
+            />
             <FormErrorMessage>
               {errors.carManufacturer?.message}
             </FormErrorMessage>
@@ -172,7 +182,11 @@ const CreateOfferForm = () => {
             isRequired
           >
             <FormLabel>Year of Manufacture </FormLabel>
-            <Input type="number" {...register("yearOfManufacture")} />
+            <Input
+              type="number"
+              {...register("yearOfManufacture")}
+              autoComplete="off"
+            />
             <FormErrorMessage>
               {errors.yearOfManufacture?.message}
             </FormErrorMessage>
@@ -180,21 +194,36 @@ const CreateOfferForm = () => {
 
           <FormControl id="licensePlate">
             <FormLabel>License Plate</FormLabel>
-            <Input type="text" {...register("licensePlate")} />
+            <Input
+              type="text"
+              {...register("licensePlate")}
+              autoComplete="off"
+            />
           </FormControl>
 
           <FormControl id="chassisNumber">
             <FormLabel>Chassis Number</FormLabel>
-            <Input type="text" {...register("chassisNumber")} />
+            <Input
+              type="text"
+              {...register("chassisNumber")}
+              autoComplete="off"
+            />
           </FormControl>
 
           <FormControl id="mileage" isInvalid={!!errors.mileage} isRequired>
             <FormLabel>Mileage</FormLabel>
-            <Input type="number" {...register("mileage")} />
+            <Input type="number" {...register("mileage")} autoComplete="off" />
             <FormErrorMessage>{errors.mileage?.message}</FormErrorMessage>
           </FormControl>
 
-          <Button colorScheme="green" type="submit">
+          <Button
+            mt={4}
+            type="submit"
+            variant="ghost"
+            colorScheme="gray"
+            bg="customBlue"
+            fontWeight="bold"
+          >
             Submit Offer
           </Button>
         </Stack>

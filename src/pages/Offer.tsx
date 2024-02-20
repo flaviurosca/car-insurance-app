@@ -1,6 +1,6 @@
 import {
-  Box,
   Button,
+  Center,
   Flex,
   Modal,
   ModalBody,
@@ -34,7 +34,10 @@ const Offer = () => {
         <ModalCloseButton />
 
         <ModalBody>
-          <Text>Please login to create an offer.</Text>
+          <Text>
+            Please log in to create an insurance policy offer. If you don't have
+            an account, you can sign up for free.
+          </Text>
         </ModalBody>
 
         <ModalFooter>
@@ -50,17 +53,37 @@ const Offer = () => {
   };
 
   return (
-    <Flex alignItems="center" justifyContent="center" mt="4">
+    <Flex
+      alignItems="center"
+      justifyContent="center"
+      pt={4}
+      bg="gray.900"
+      color="white"
+    >
       {loggedIn ? (
-        <Box>
-          <Text fontSize="2xl" fontWeight="bold" mb="4">
-            Welcome to the Offer Page!
+        <Center minH="100vh" flexDirection="column" mb={8}>
+          <Text
+            fontSize="2xl"
+            fontWeight="bold"
+            mx={4}
+            my={8}
+            textAlign="center"
+          >
+            Create Your Insurance Policy Offer
           </Text>
-          <Text fontSize="xl" fontWeight="bold" mb="4">
-            {loggedIn}
+          <Text fontSize="lg" mx={4} textAlign="center">
+            Welcome,{" "}
+            <Text as="span" color="customBlue">
+              {loggedIn}
+            </Text>
+            !
+          </Text>
+          <Text fontSize="lg" mx={4} textAlign="center">
+            Please fill out the form below to create your personalised insurance
+            policy offer.
           </Text>
           <CreateOfferForm />
-        </Box>
+        </Center>
       ) : (
         <Modal isOpen={true} onClose={goToHome}>
           <ModalOverlay />
