@@ -121,7 +121,7 @@ const LoginForm = () => {
               type="submit"
               variant="ghost"
               colorScheme="gray"
-              bg="#51ACEC"
+              bg="customBlue"
               fontWeight="bold"
             >
               <HStack spacing={2}>

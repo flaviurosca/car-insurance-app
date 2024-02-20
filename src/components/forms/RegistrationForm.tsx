@@ -131,7 +131,7 @@ const RegistrationForm = () => {
               type="submit"
               variant="ghost"
               colorScheme="gray"
-              bg="#51ACEC"
+              bg="customBlue"
               fontWeight="bold"
             >
               Register

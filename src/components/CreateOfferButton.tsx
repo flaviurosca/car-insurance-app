@@ -9,7 +9,7 @@ const CreateOfferButton = () => {
         variant="ghost"
         size="lg"
         colorScheme="gray"
-        bg="#51ACEC"
+        bg="customBlue"
       >
         Get Started
       </Button>

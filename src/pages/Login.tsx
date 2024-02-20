@@ -20,8 +20,8 @@ const Login = () => {
           w="full"
           variant="outline"
           colorScheme="blue"
-          color="#51ACEC"
-          _hover={{ bg: "#51ACEC", color: "gray.900" }}
+          color="customBlue"
+          _hover={{ bg: "customBlue", color: "gray.900" }}
         >
           {showLogin ? "Create an account" : "Back to login"}
         </Button>

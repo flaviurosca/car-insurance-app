@@ -40,7 +40,7 @@ const Navbar = () => {
           to="/"
           _hover={{ textDecoration: "none" }}
         >
-          <HStack spacing={0} color="#51ACEC" _hover={{ color: "white" }}>
+          <HStack spacing={0} color="customBlue" _hover={{ color: "white" }}>
             <IconButton
               aria-label="Home"
               icon={<BiSolidCarMechanic />}
@@ -60,7 +60,7 @@ const Navbar = () => {
         display={{ base: "block", md: "none" }}
         onClick={toggleMenu}
         fontSize={30}
-        _hover={{ color: "#51ACEC" }}
+        _hover={{ color: "customBlue" }}
         cursor="pointer"
       >
         {isMenuOpen ? <IoMdClose /> : <IoMdMenu />}
@@ -77,7 +77,7 @@ const Navbar = () => {
             to="/dashboard"
             _hover={{ textDecoration: "none" }}
           >
-            <Flex alignItems="center" _hover={{ color: "#51ACEC" }}>
+            <Flex alignItems="center" _hover={{ color: "customBlue" }}>
               <IconButton
                 aria-label="Dashboard"
                 icon={<MdDashboard />}
@@ -96,7 +96,7 @@ const Navbar = () => {
             to="/login"
             _hover={{ textDecoration: "none" }}
           >
-            <Flex alignItems="center" _hover={{ color: "#51ACEC" }}>
+            <Flex alignItems="center" _hover={{ color: "customBlue" }}>
               <IconButton
                 aria-label="Login"
                 icon={<FaSignInAlt />}
@@ -133,7 +133,7 @@ const Navbar = () => {
             to="/offer"
             _hover={{ textDecoration: "none" }}
           >
-            <Flex alignItems="center" _hover={{ color: "#51ACEC" }}>
+            <Flex alignItems="center" _hover={{ color: "customBlue" }}>
               <IconButton
                 aria-label="Create Offer"
                 icon={<FaPlus />}
@@ -159,7 +159,7 @@ const Navbar = () => {
                 onClick={handleLogout}
                 _hover={{ textDecoration: "none" }}
               >
-                <Flex alignItems="center" _hover={{ color: "#51ACEC" }}>
+                <Flex alignItems="center" _hover={{ color: "customBlue" }}>
                   <IconButton
                     aria-label="Logout"
                     icon={<FaSignOutAlt />}

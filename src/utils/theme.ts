@@ -17,6 +17,10 @@ const theme = extendTheme({
       },
     },
   },
+
+  colors: {
+    customBlue: "#51ACEC",
+  },
 });
 
 export default theme;
