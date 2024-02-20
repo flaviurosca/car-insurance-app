@@ -7,12 +7,13 @@ import Login from "./pages/Login";
 import Offer from "./pages/Offer";
 import UserDashboard from "./pages/UserDashboard";
 import Footer from "./components/Footer";
+import theme from "./utils/theme";
 
 const App = () => {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
           <>
             <Navbar />
 
