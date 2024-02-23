@@ -29,26 +29,35 @@ const Offer = () => {
 
   const ModalComponent = () => {
     return (
-      <>
-        <ModalHeader>Login required</ModalHeader>
-        <ModalCloseButton />
+      <Modal isOpen={true} onClose={goToHome}>
+        <ModalOverlay backdropFilter="auto" backdropBlur="2px" />
+        <ModalContent bg="gray.900" color="white">
+          <ModalHeader>Login required</ModalHeader>
+          <ModalCloseButton />
 
-        <ModalBody>
-          <Text>
-            Please log in to create an insurance policy offer. If you don't have
-            an account, you can sign up for free.
-          </Text>
-        </ModalBody>
+          <ModalBody>
+            <Text color="gray.300">
+              Please log in to create an insurance policy offer. If you don't
+              have an account, you can sign up for free.
+            </Text>
+          </ModalBody>
 
-        <ModalFooter>
-          <Button colorScheme="green" mr={3} onClick={goToLogin}>
-            Login
-          </Button>
-          <Button variant="ghost" onClick={goToHome}>
-            Cancel
-          </Button>
-        </ModalFooter>
-      </>
+          <ModalFooter>
+            <Button variant="ghost" bg="customBlue" mr={3} onClick={goToLogin}>
+              Login
+            </Button>
+            <Button
+              variant="outline"
+              colorScheme="blue"
+              color="customBlue"
+              _hover={{ bg: "white", color: "gray.900" }}
+              onClick={goToHome}
+            >
+              Cancel
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     );
   };
 
@@ -85,12 +94,7 @@ const Offer = () => {
           <CreateOfferForm />
         </Center>
       ) : (
-        <Modal isOpen={true} onClose={goToHome}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalComponent />
-          </ModalContent>
-        </Modal>
+        <ModalComponent />
       )}
     </Flex>
   );
