@@ -1,17 +1,21 @@
 import { Button, Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
 
-const CreateOfferButton = () => {
+type CreateOfferButtonProps = {
+  customVariant?: boolean;
+};
+
+const CreateOfferButton = ({ customVariant }: CreateOfferButtonProps) => {
   return (
     <ChakraLink as={ReactRouterLink} to="/offer">
       <Button
-        w="300px"
+        w={customVariant ? "100px" : "300px"}
         variant="ghost"
-        size="lg"
+        size={customVariant ? "sm" : "lg"}
         colorScheme="gray"
         bg="customBlue"
       >
-        Get Started
+        {customVariant ? "Create Offer" : "Get Started"}
       </Button>
     </ChakraLink>
   );
