@@ -1,7 +1,7 @@
 import { Box, Flex, Text, Image, VStack } from "@chakra-ui/react";
 import ReviewsSection from "../components/ReviewsSection";
 import FeaturesSection from "../components/FeaturesSection";
-import CreateOfferButton from "../components/CreateOfferButton";
+import CreateOfferButton from "../components/buttons/CreateOfferButton";
 import BenefitsSection from "../components/BenefitsSection";
 
 const Home = () => {

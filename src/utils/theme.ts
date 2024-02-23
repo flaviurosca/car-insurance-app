@@ -16,10 +16,24 @@ const theme = extendTheme({
         },
       },
     },
+    Table: {
+      variants: {
+        striped: {
+          th: {
+            color: "gray.300",
+            py: 4,
+          },
+        },
+      },
+    },
   },
 
   colors: {
     customBlue: "#51ACEC",
+    customStriped: {
+      50: "#51ACEC",
+      100: "#0d4672",
+    },
   },
 });
 
