@@ -3,6 +3,7 @@ import ReviewsSection from "../components/ReviewsSection";
 import FeaturesSection from "../components/FeaturesSection";
 import CreateOfferButton from "../components/buttons/CreateOfferButton";
 import BenefitsSection from "../components/BenefitsSection";
+import FeedbackDrawer from "../components/FeedbackDrawer";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
         color="white"
         mt={{ base: 20, md: 30 }}
       >
-        <VStack w={{ base: "90%", lg: "40%" }}>
+        <VStack mx={8}>
           <Box>
             <Text fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold">
               Car insurance
@@ -25,7 +26,13 @@ const Home = () => {
             </Text>
           </Box>
 
-          <Box p={4} boxShadow="md" color="gray.300" borderRadius="lg">
+          <Box
+            p={4}
+            boxShadow="md"
+            color="gray.300"
+            borderRadius="lg"
+            maxW="800px"
+          >
             <Text fontSize="xl">
               Your road to secure journeys! Experience peace of mind with our
               comprehensive car insurance solutions. Tailored for every driver,
@@ -36,10 +43,12 @@ const Home = () => {
           </Box>
         </VStack>
 
-        <Box w={{ base: "50%", lg: "40%" }} m={4}>
+        <Box m={4}>
           <Image src="/img/car.png" alt="Car image" borderRadius="lg" />
         </Box>
       </Flex>
+
+      <FeedbackDrawer />
 
       <CreateOfferButton />
 
