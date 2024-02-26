@@ -8,6 +8,7 @@ import Offer from "./pages/Offer";
 import UserDashboard from "./pages/UserDashboard";
 import Footer from "./components/Footer";
 import theme from "./utils/theme";
+import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
 
             <Box>
               <Routes>
-                <Route path="*" element={<div>404 NOT FOUND</div>} />
+                <Route path="*" element={<PageNotFound />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/offer" element={<Offer />} />
