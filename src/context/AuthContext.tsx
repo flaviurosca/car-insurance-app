@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 type AuthContextType = {
   loggedIn: string | null;
@@ -16,7 +16,16 @@ export const AuthContext = createContext<AuthContextType | undefined>(
 );
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [loggedIn, setLoggedIn] = useState<string | null>(null);
+  const [loggedIn, setLoggedIn] = useState<string | null>(() => {
+    const storedLoggedIn = localStorage.getItem("loggedIn");
+    return storedLoggedIn ? JSON.parse(storedLoggedIn) : null;
+  });
+
+  useEffect(() => {
+    loggedIn
+      ? localStorage.setItem("loggedIn", JSON.stringify(loggedIn))
+      : localStorage.removeItem("loggedIn");
+  }, [loggedIn]);
 
   const handleLogin = (userEmail: string) => {
     setLoggedIn(userEmail);
