@@ -153,7 +153,16 @@ const CreateOfferForm = () => {
             isRequired
           >
             <FormLabel>Insurance Type</FormLabel>
-            <Select {...register("insuranceType")}>
+            <Select
+              {...register("insuranceType")}
+              sx={{
+                option: {
+                  bg: "gray.800",
+                  color: "white",
+                  _hover: { bg: "gray.600" },
+                },
+              }}
+            >
               <option value="RCA">RCA</option>
               <option value="Casco">Casco</option>
             </Select>

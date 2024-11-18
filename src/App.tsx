@@ -12,7 +12,9 @@ import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/car-insurance-app">
+    <BrowserRouter
+    //  basename="/car-insurance-app"
+    >
       <AuthProvider>
         <ChakraProvider theme={theme}>
           <>
